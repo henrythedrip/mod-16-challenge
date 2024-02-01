@@ -31,6 +31,10 @@
         padding: 20px;
     }
 
+    img {
+        width: 200px;
+    }
+
     .product {
         border: 1px solid #ccc;
         padding: 10px;
@@ -54,7 +58,6 @@
         color: #fff;
         padding: 10px;
         text-align: center;
-        position: fixed;
         bottom: 0;
         width: 100%;
     }
