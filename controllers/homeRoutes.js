@@ -10,4 +10,15 @@ router.get('/', async (req, res) => {
   res.render('homepage', { users });
 });
 
+router.get('/users', async (req, res) => {
+    const userData = await User.findAll();
+    // console.log(userData);
+    res.json(userData);
+})
+
+// router.post('/users', async (req, res) => {
+//     const userData = await User.findAll();
+//     res.json(userData);
+// })
+
 module.exports = router;
