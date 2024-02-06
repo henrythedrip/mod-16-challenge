@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Products = require('../models/Products');
+const Products = require('../models/Product');
 const User = require('../models/User');
 
 // route to render the homepage handlebar view.
