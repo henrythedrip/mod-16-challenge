@@ -1,38 +1,34 @@
 const { Model, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('mysql://user:pass@localhost:3001/mod-16-challenge');
 const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
 
-class User extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
+class Shopper extends Model {}
 
-User.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    name: {
-      type: DataTypes.STRING,
-    },
-    email: {
-      type: DataTypes.STRING,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
-    },
-    password: {
-      type: DataTypes.STRING,
-      validate: {
-        len: [8],
-      },
+Shopper.init({
+  // Model attributes are defined here
+  shopperID: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
+  name: {
+    type: DataTypes.STRING
+    // allowNull defaults to true
+  },
+ 
+  email: {
+    type: DataTypes.STRING
+    // allowNull defaults to true
+  },
+
+  password: {
+    type: DataTypes.STRING,
+    validate: {
+      len: [8],
     },
   },
+}, 
+  
   {
     hooks: {
       beforeCreate: async (newUserData) => {
@@ -41,11 +37,14 @@ User.init(
       },
     },
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
-  }
-);
+    modelName: 'Shopper',
+  });
 
-module.exports = User;
+
+// the defined model is the class itself
+console.log(Shopper === sequelize.models.Shopper)// true
+
+module.exports = Shopper;

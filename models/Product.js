@@ -1,51 +1,41 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
+class Product extends Model {
+  
 }
 
-User.init(
+Product.init(
   {
-    id: {
+    ProductID: {
       type: DataTypes.INTEGER,
-      
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    ProductName: {
       type: DataTypes.STRING,
     },
-    email: {
+    ProductDescription: {
       type: DataTypes.STRING,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
     },
-    password: {
-      type: DataTypes.STRING,
-      validate: {
-        len: [8],
+      price: {
+        type: DataTypes.DataTypes.INTEGER,
       },
-    },
-  },
-  {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+
+      img:  {
+        type: DataTypes.STRING,
       },
-    },
+
+
+    
+
+
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
-  }
-);
 
-module.exports = User;
+  });
+
+module.exports = Product;
