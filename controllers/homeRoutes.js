@@ -48,4 +48,30 @@ router.delete('/users/:id', (req, res) => {
     });
 });
 
+// user routes
+// .post login
+
+// .post logout
+
+// .post register
+
+// .get user
+
+// .get user/:id
+
+// .delete /user/:id
+
+// .put /user/:id
+
+// product routes
+// .get /api/products -> res.render('product', {productData})
+// .get /api/products/:id
+
+// view routes
+// .get /homepage -> render 'homepage.handlebars'
+
+// res.render('product', {productData})
+
+// create other routes files like "productRoutes.js", "userRoutes.js" (login/logout)
+
 module.exports = router;
