@@ -1,49 +1,49 @@
 [
     {      
-        "ProductName": "Cancel henrythedrip Button",
-        "ProductDescription": "A 2-inch button with a cancel symbol over top of henrythedrip",
+        "productName": "Cancel henrythedrip Button",
+        "productDescription": "A 2-inch button with a cancel symbol over top of henrythedrip",
         "price": "2.00",
         "img": "../assets/images/IMG_Pin2.jpg"
     },
     {      
-        "ProductName": "henrythedrip t-shirt",
-        "ProductDescription": "A white tee-shirt with henrythedrip's face on the back. The front says 'Drip or Be Dripped On'.",
+        "productName": "henrythedrip t-shirt",
+        "productDescription": "A white tee-shirt with henrythedrip's face on the back. The front says 'Drip or Be Dripped On'.",
         "price": "20.00",
         "img": "../assets/images/IMG_Tee2.jpg"
     },
     {      
-        "ProductName": "henrythedrip Magnet",
-        "ProductDescription": "A 1-inch magnet with henrythedrip's augmented face and Instagram handle.",
+        "productName": "henrythedrip Magnet",
+        "productDescription": "A 1-inch magnet with henrythedrip's augmented face and Instagram handle.",
         "price": "2.00",
         "img": "../assets/images/IMG_Magnet.jpg"
     },
     {      
-        "ProductName": "henrythedrip Orange Sticker",
-        "ProductDescription": "A 1-inch sticker with henrythedrip's augmented face and Instagram handle in the color orange.",
+        "productName": "henrythedrip Orange Sticker",
+        "productDescription": "A 1-inch sticker with henrythedrip's augmented face and Instagram handle in the color orange.",
         "price": "1.00",
         "img": "../assets/images/IMG_Orange_Sticker.jpg"
     },
     {      
-        "ProductName": "henrythedrip Blue Sticker",
-        "ProductDescription": "A 1-inch sticker with henrythedrip's augmented face and Instagram handle in the color blue.",
+        "productName": "henrythedrip Blue Sticker",
+        "productDescription": "A 1-inch sticker with henrythedrip's augmented face and Instagram handle in the color blue.",
         "price": "1.00",
         "img": "../assets/images/IMG_Blue_Sticker.jpg"
     },
     {      
-        "ProductName": "henrythedrip Mini Sticker",
-        "ProductDescription": "A very small sticker with henrythedrip's Instagram handle in a random design. Design might vary from the one that's pictured",
+        "productName": "henrythedrip Mini Sticker",
+        "productDescription": "A very small sticker with henrythedrip's Instagram handle in a random design. Design might vary from the one that's pictured",
         "price": "0.50",
         "img": "../assets/images/IMG_Mini_Sticker.jpg"
     },
     {      
-        "ProductName": "henrythedrip's Signature",
-        "ProductDescription": "A small white piece of paper with henrythedrip's signature.",
+        "productName": "henrythedrip's Signature",
+        "productDescription": "A small white piece of paper with henrythedrip's signature.",
         "price": "100.00",
         "img": "../assets/images/IMG_Signature.jpg"
     },
     {      
-        "ProductName": "henrythedrip's Signature",
-        "ProductDescription": "A small white piece of paper with henrythedrip's signature.",
+        "productName": "henrythedrip's Signature",
+        "productDescription": "A small white piece of paper with henrythedrip's signature.",
         "price": "100.00",
         "img": "../assets/images/IMG_Signature.jpg"
     }
