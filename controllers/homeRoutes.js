@@ -1,21 +1,22 @@
 const router = require('express').Router();
+const Products = require('../models/Product');
 const User = require('../models/User');
 
+// route to render the homepage handlebar view.
 router.get('/', async (req, res) => {
-  // TODO: Render template with Sequelize data
-  const userData = await User.findAll({
-    attribut: { exclude: ['password'] }
-  });
-  const users = userData.map(user => user.get({ plain: true }));
-  res.render('homepage', { users });
+  res.render('homepage');
 });
 
+// .get users ✅ 
+// gets all users, return all of the users as a JSON object
 router.get('/users', async (req, res) => {
   const userData = await User.findAll();
   // console.log(userData);
   res.json(userData);
 });
 
+// .post register ✅ 
+// creates users with name, email, password.
 router.post('/users', (req, res) => {
   const { name, email, password } = req.body;
   User.create({
@@ -30,6 +31,17 @@ router.post('/users', (req, res) => {
   })
 });
 
+// .get user/:id ✅
+// this gets users by Primary Key (which is ID).. the request parameter is the ID because that was designated in the model
+router.get('/users/:id', async (req, res) => {
+  const userByID = await User.findByPk(req.params.id);
+  // console.log(userByID);
+  res.json(userByID);
+});
+
+// .delete /user/:id ✅ 
+// this deletes users by ID 
+// TODO: Only allow delete functionality after verifying that users are logged in, they should have a token in their storage that says their logged in, or they should have to use their password for the account that they're trying to delete.
 router.delete('/users/:id', (req, res) => {
   User.destroy({
     where: { id: req.params.id }
@@ -53,19 +65,24 @@ router.delete('/users/:id', (req, res) => {
 
 // .post logout
 
-// .post register
-
-// .get user
-
-// .get user/:id
-
-// .delete /user/:id
-
-// .put /user/:id
+// .put /user/:id (alter a user) XXX
+// this would be neccessary if people wanted to change their name, email or password
 
 // product routes
 // .get /api/products -> res.render('product', {productData})
+// finds all products and returns them as a JSON object
+router.get('/api/products', async (req, res) => {
+  const products = await Products.findAll();
+  res.json(products);
+}) 
+
 // .get /api/products/:id
+// gets products by their primary key, which is ID, as designated by productData.json
+router.get('/api/products/:id', async (req, res) => {
+  const productByID = await Products.findByPk(req.params.id);
+  // console.log(userByID);
+  res.json(productByID);
+});
 
 // view routes
 // .get /homepage -> render 'homepage.handlebars'
