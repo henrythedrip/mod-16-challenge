@@ -3,49 +3,43 @@
         "productName": "Cancel henrythedrip Button",
         "productDescription": "A 2-inch button with a cancel symbol over top of henrythedrip",
         "price": "2.00",
-        "img": "../assets/images/IMG_Pin2.jpg"
+        "img": "./images/IMG_Pin2.jpg"
     },
     {      
         "productName": "henrythedrip t-shirt",
         "productDescription": "A white tee-shirt with henrythedrip's face on the back. The front says 'Drip or Be Dripped On'.",
         "price": "20.00",
-        "img": "../assets/images/IMG_Tee2.jpg"
+        "img": "./images/IMG_Tee2.jpg"
     },
     {      
         "productName": "henrythedrip Magnet",
         "productDescription": "A 1-inch magnet with henrythedrip's augmented face and Instagram handle.",
         "price": "2.00",
-        "img": "../assets/images/IMG_Magnet.jpg"
+        "img": "./images/IMG_Magnet.jpg"
     },
     {      
         "productName": "henrythedrip Orange Sticker",
         "productDescription": "A 1-inch sticker with henrythedrip's augmented face and Instagram handle in the color orange.",
         "price": "1.00",
-        "img": "../assets/images/IMG_Orange_Sticker.jpg"
+        "img": "./images/IMG_Orange_Sticker.jpg"
     },
     {      
         "productName": "henrythedrip Blue Sticker",
         "productDescription": "A 1-inch sticker with henrythedrip's augmented face and Instagram handle in the color blue.",
         "price": "1.00",
-        "img": "../assets/images/IMG_Blue_Sticker.jpg"
+        "img": "./images/IMG_Blue_Sticker.jpg"
     },
     {      
         "productName": "henrythedrip Mini Sticker",
-        "productDescription": "A very small sticker with henrythedrip's Instagram handle in a random design. Design might vary from the one that's pictured",
-        "price": "0.50",
-        "img": "../assets/images/IMG_Mini_Sticker.jpg"
+        "productDescription": "Two very small stickers with henrythedrip's Instagram handle in a random design. Design might vary from the one that's pictured!",
+        "price": "1.00",
+        "img": "./images/IMG_Mini_Sticker.jpg"
     },
     {      
         "productName": "henrythedrip's Signature",
         "productDescription": "A small white piece of paper with henrythedrip's signature.",
         "price": "100.00",
-        "img": "../assets/images/IMG_Signature.jpg"
-    },
-    {      
-        "productName": "henrythedrip's Signature",
-        "productDescription": "A small white piece of paper with henrythedrip's signature.",
-        "price": "100.00",
-        "img": "../assets/images/IMG_Signature.jpg"
+        "img": "./images/IMG_Signature.jpg"
     }
   ]
 
