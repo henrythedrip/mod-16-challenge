@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Products = require('../models/Product');
 const User = require('../models/User');
+const withAuth = require('../utils/auth');
 
 // route to render the homepage handlebar view.
 router.get('/', async (req, res) => {
@@ -63,7 +64,58 @@ router.delete('/users/:id', (req, res) => {
 // user routes
 // .post login
 
+router.post('/login', async (req, res) => {
+  try {
+    const userData = await User.findOne({ where: { email: req.body.email } });
+
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email, please try again' });
+      return;
+    }
+
+    const validPassword = await userData.checkPassword(req.body.password);
+    console.log(userData.id);
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect password, please try again' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.json({ user: userData, message: 'You are now logged in!' });
+    });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
+
 // .post logout
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 // .put /user/:id (alter a user) XXX
 // this would be neccessary if people wanted to change their name, email or password
@@ -84,11 +136,17 @@ router.get('/api/products/:id', async (req, res) => {
   res.json(productByID);
 });
 
+// route to disallow anyone from seeing pages without logging in
+// router.get('/', withAuth, async (req, res) => {
+// });
+
 // view routes
 // .get /homepage -> render 'homepage.handlebars'
 
 // res.render('product', {productData})
 
 // create other routes files like "productRoutes.js", "userRoutes.js" (login/logout)
+
+// create routes that push people back to a specific page if they are not logged in (try mod 14 activity 23 utils/auth.js)
 
 module.exports = router;
