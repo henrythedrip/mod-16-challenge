@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const Order = require('./Order'); // Make sure this path is correct
-const Product = require('./Product'); // Make sure this path is correct
+const Products = require('./Products'); // Make sure this path is correct
 
 class OrderDetail extends Model {}
 
@@ -24,7 +24,7 @@ OrderDetail.init({
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: 'products', // This is the table name for Product, it could be different based on your setup
+      model: 'products', // This is the table name for Products, it could be different based on your setup
       key: 'productID',
     }
   },
@@ -59,3 +59,4 @@ OrderDetail.belongsTo(Products, {
 
 // Export the model
 module.exports = OrderDetail;
+
