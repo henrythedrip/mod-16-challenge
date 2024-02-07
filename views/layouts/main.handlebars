@@ -3,35 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Henry The Drip Merch</title>
     <style>
         
     </style>
 </head>
 <body>
-
     <header>
-        <h1>{{siteTitle}} 💧 Merch & Music</h1>
+        <h1>Henry The 💧 Merch & Music</h1>
     </header>
 
     <nav>
-        {{#each navItems}}
-            <a href="{{url}}">{{label}}</a>
-        {{/each}}
+        <a href="index.html">Home 🏠</a>
+        <a href="products.html">Products 👕</a>
+        <a href="contact.html">📞 Contact ✉️</a>
+        <a href="login.html">Login 💼</a>
     </nav>
 
-    <section>
-        {{#each products}}
-            <div class="product">
-                <p>{{productDescription}}: <a href="{{productLink}}" target="_blank">{{productName}}</a></p>
-            </div>
-        {{/each}}
+    <section id="content">
+        {{{ body }}}
     </section>
-
+   
     <footer>
-        <p>&copy; {{currentYear}} {{siteTitle}} 💧 Merch. All rights reserved.</p>
+        <p>&copy; 2024 henrythedrip 💧 Merch. All rights reserved.</p>
     </footer>
 
+    <!-- Handlebars library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 </body>
 </html>
