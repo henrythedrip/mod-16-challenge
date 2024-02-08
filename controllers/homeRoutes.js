@@ -150,6 +150,10 @@ router.get("/products", async (req, res)=>{
   }
 })
 
+router.get("/contact", (req, res)=>{
+  res.render('contact')
+});
+
 // route to disallow anyone from seeing pages without logging in
 // router.get('/', withAuth, async (req, res) => {
 // });
