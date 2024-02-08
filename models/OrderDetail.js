@@ -46,7 +46,7 @@ OrderDetail.init({
   underscored: true,
 });
 
-// Associations
+// Association methods
 OrderDetail.belongsTo(Order, {
   foreignKey: 'orderId',
   as: 'order',

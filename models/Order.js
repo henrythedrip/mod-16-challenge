@@ -2,9 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Order extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
+ 
 }
 
 Order.init(
@@ -33,5 +31,18 @@ Order.init(
     modelName: 'Order',
   }
 );
+
+// Add associations method
+Order.associate = (models) => {
+  Order.belongsTo(models.User, {
+    foreignKey: 'shopperID',
+    as: 'user'
+  });
+
+  Order.hasMany(models.OrderDetail, {
+    foreignKey: 'orderId',
+    as: 'orderDetails'
+  });
+};
 
 module.exports = Order;
