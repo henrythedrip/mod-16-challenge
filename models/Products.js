@@ -25,6 +25,9 @@ Products.init(
     img:  {
       type: DataTypes.STRING,
     }
+    altText:  {
+      type: DataTypes.STRING,
+    
   },
   {
     sequelize,
@@ -33,5 +36,11 @@ Products.init(
     underscored: true,
     modelName: 'products',
   });
-
+// Add associations method
+Products.associate = (models) => {
+  Products.hasMany(models.OrderDetail, {
+    foreignKey: 'productId',
+    as: 'orderDetails'
+  });
+};
 module.exports = Products;
