@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Products = require('../models/Product');
+const Products = require('../models/Products');
 const User = require('../models/User');
 const withAuth = require('../utils/auth');
 
@@ -92,6 +92,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -134,6 +135,23 @@ router.get('/api/products/:id', async (req, res) => {
   const productByID = await Products.findByPk(req.params.id);
   // console.log(userByID);
   res.json(productByID);
+});
+//https://localhost:3001/products
+router.get("/products", async (req, res)=>{
+  try{
+    let getProducts =  await Products.findAll();
+    // console.log("This is all the products", getProducts);
+    let products = getProducts.map((product)=>product.get({plain: true}))
+    console.log("This is all the products", products);
+    res.render('products',{ products})
+  }catch (err){
+    console.log(err);
+    res.status(500).json(err)
+  }
+})
+
+router.get("/contact", (req, res)=>{
+  res.render('contact')
 });
 
 // route to disallow anyone from seeing pages without logging in
