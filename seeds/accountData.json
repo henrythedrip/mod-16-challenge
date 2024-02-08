@@ -1,0 +1,33 @@
+[
+    {
+      "address": "12323 Main",
+      "city": "Boise",
+      "state": " ID",
+      "zip": "83705"
+    },
+    {
+      "address": "13 Elm",
+      "city": "Boise",
+      "state": " ID",
+      "zip": "83616"
+  },
+  {
+      "address": "1361 Chaucer Way",
+      "city": "Eagle",
+      "state": " ID",
+      "zip": "83616"
+  },
+  {
+      "address": "42 E 3600 S",
+      "city": "Murray",
+      "state": "UT",
+      "zip": "84777"
+  },
+  {
+      "address": "745 Winding Road",
+      "city": "Mapleton",
+      "state": "UT",
+      "zip": "87557"
+  }
+  ]
+  
