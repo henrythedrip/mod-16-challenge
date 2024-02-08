@@ -24,12 +24,12 @@ Products.init(
     },
     img:  {
       type: DataTypes.STRING,
-    }
+    },
     altText:  {
       type: DataTypes.STRING,
     
   },
-  {
+  
     sequelize,
     timestamps: false,
     freezeTableName: true,
