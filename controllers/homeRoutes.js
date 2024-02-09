@@ -37,6 +37,7 @@ router.post('/users', (req, res) => {
 router.get('/users/:id', async (req, res) => {
   const userByID = await User.findByPk(req.params.id);
   // console.log(userByID);
+  res.render('user',{ users })
   res.json(userByID);
 });
 
@@ -119,6 +120,34 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      // we dont have this model so we aren't going to provide it.
+      // include: [{ model: Project }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    console.log(user);
+
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// .post login api/users/login
+
+// router.post('/api/users/login', (req, res) => {
+  
+// })
+
 // .put /user/:id (alter a user) XXX
 // this would be neccessary if people wanted to change their name, email or password
 
@@ -143,7 +172,7 @@ router.get("/products", async (req, res)=>{
     let getProducts =  await Products.findAll();
     // console.log("This is all the products", getProducts);
     let products = getProducts.map((product)=>product.get({plain: true}))
-    console.log("This is all the products", products);
+    // console.log("This is all the products", products);
     res.render('products',{ products})
   }catch (err){
     console.log(err);
