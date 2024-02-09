@@ -33,16 +33,16 @@ Order.init(
 );
 
 // Add associations method
-Order.associate = (models) => {
-  Order.belongsTo(models.User, {
-    foreignKey: 'shopperID',
-    as: 'user'
-  });
+// Order.associate = (models) => {
+//   Order.belongsTo(models.User, {
+//     foreignKey: 'shopperID',
+//     as: 'user'
+//   });
 
-  Order.hasMany(models.OrderDetail, {
-    foreignKey: 'orderId',
-    as: 'orderDetails'
-  });
-};
+//   Order.hasMany(models.OrderDetail, {
+//     foreignKey: 'orderId',
+//     as: 'orderDetails'
+//   });
+// };
 
 module.exports = Order;

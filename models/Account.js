@@ -46,11 +46,11 @@ Account.init(
 );
 
 // Add associations method
-Account.associate = (models) => {
-  Account.belongsTo(models.User, {
-    foreignKey: 'shopperID',
-    as: 'user'
-  });
-};
+// Account.associate = (models) => {
+//   Account.belongsTo(models.User, {
+//     foreignKey: 'shopperID',
+//     as: 'user'
+//   });
+// };
 
 module.exports = Account;

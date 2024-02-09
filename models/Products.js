@@ -27,9 +27,9 @@ Products.init(
     },
     altText:  {
       type: DataTypes.STRING,
-    
+    }
   },
-  
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
@@ -37,10 +37,10 @@ Products.init(
     modelName: 'products',
   });
 // Add associations method
-Products.associate = (models) => {
-  Products.hasMany(models.OrderDetail, {
-    foreignKey: 'productId',
-    as: 'orderDetails'
-  });
-};
+// Products.associate = (models) => {
+//   Products.hasMany(models.OrderDetail, {
+//     foreignKey: 'productId',
+//     as: 'orderDetails'
+//   });
+// };
 module.exports = Products;
