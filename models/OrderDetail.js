@@ -47,15 +47,15 @@ OrderDetail.init({
 });
 
 // Association methods
-OrderDetail.belongsTo(Order, {
-  foreignKey: 'orderId',
-  as: 'order',
-});
+// OrderDetail.belongsTo(Order, {
+//   foreignKey: 'orderId',
+//   as: 'order',
+// });
 
-OrderDetail.belongsTo(Products, {
-  foreignKey: 'productId',
-  as: 'products',
-});
+// OrderDetail.belongsTo(Products, {
+//   foreignKey: 'productId',
+//   as: 'products',
+// });
 
 // Export the model
 module.exports = OrderDetail;

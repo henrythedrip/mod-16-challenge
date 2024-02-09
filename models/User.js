@@ -49,16 +49,16 @@ User.init(
 );
 
 // Add associations method
-User.associate = (models) => {
-  User.hasOne(models.Account, {
-    foreignKey: 'shopperID',
-    as: 'account'
-  });
+// User.associate = (models) => {
+//   User.hasOne(models.Account, {
+//     foreignKey: 'shopperID',
+//     as: 'account'
+//   });
 
-  User.hasMany(models.Order, {
-    foreignKey: 'shopperID',
-    as: 'orders'
-  });
-};
+//   User.hasMany(models.Order, {
+//     foreignKey: 'shopperID',
+//     as: 'orders'
+//   });
+// };
 
 module.exports = User;
