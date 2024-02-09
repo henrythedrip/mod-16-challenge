@@ -66,8 +66,9 @@ router.delete('/users/:id', (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
+    
+    // TODO: we are differentiating btwn incorrect email response and incorrect password response here, when we should make those responses identical for security purposes.
     const userData = await User.findOne({ where: { email: req.body.email } });
-
     if (!userData) {
       res
         .status(400)
@@ -163,7 +164,7 @@ router.get("/contact", (req, res)=>{
 
 // res.render('product', {productData})
 
-// create other routes files like "productRoutes.js", "userRoutes.js" (login/logout)
+// TODO: create other routes files like "productRoutes.js", "userRoutes.js" (login/logout)
 
 // create routes that push people back to a specific page if they are not logged in (try mod 14 activity 23 utils/auth.js)
 
