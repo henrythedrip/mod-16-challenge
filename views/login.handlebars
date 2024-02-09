@@ -1,6 +1,6 @@
 <section>
 <h1>Login Page</h1>
-    <form>
+    <form class="login-drip">
         <div class="login-section">
             <h2>Login</h2>
             <h3>Email</h3>
@@ -10,9 +10,11 @@
             <button type="submit">Login</button>
         </div>
     </form>
-    <form>
+    <form class="create-account-drip">
         <div class="create-account-section">
             <h2>Create an Account</h2>
+            <h3>Name</h3>
+            <input type="text" id="create-account-name">
             <h3>Email</h3>
             <input type="text" id="create-account-email">
             <h3>Password</h3>
@@ -22,5 +24,5 @@
     </div>
 
     {{!-- TODO: bring in some js that handles login and create account submit events, that talk to the backend with the information inside of the forms --}}
-    
+    <script src="/js/login.js"></script>
 </section>
