@@ -33,12 +33,12 @@ const loginFormHandler = async (event) => {
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#name-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+    const name = document.querySelector('#create-account-name').value.trim();
+    const email = document.querySelector('#create-account-email').value.trim();
+    const password = document.querySelector('#create-account-password').value.trim();
   
     if (name && email && password) {
-      const response = await fetch('/api/users', {
+      const response = await fetch('/users', {
         method: 'POST',
         body: JSON.stringify({ name, email, password }),
         headers: { 'Content-Type': 'application/json' },
