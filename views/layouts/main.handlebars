@@ -23,6 +23,11 @@
         <a href="/music-videos">Music Videos 🎥</a>
         <a href="/profile">Profile 💼</a>
         <button id="debug-logout-button">DEBUG LOGOUT</button>
+        {{#if logged_in}}
+        <button id="logout">Logout ❌</button>
+        {{else}}
+        <a href="/login">Login 🖥️</a>
+        {{/if}}
         {{!-- TODO: we need this button to work every time, and also change from login to logout depending on whether or not the user is logged in --}}
     </nav>
 
@@ -37,5 +42,8 @@
     <!-- Handlebars library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="/js/login.js"></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>
