@@ -205,6 +205,11 @@ router.get("/contact", (req, res)=>{
 router.get('/music-videos', (req, res) => {
   const videos = [
     {
+      title: "Hold Shit Down",
+      description: "A hype song with an even crazier video",
+      embedUrl: "https://youtube.com/embed/rAFPHdAOU0g"
+    },
+    {
       title: "Light Sounds (feat. UA The Duo)",
       description: "A dynamic collaboration with UA The Duo",
       embedUrl: "https://www.youtube.com/embed/g9ujuI1o8jM"
