@@ -1,65 +1,83 @@
-/* TODO: we need the webpage to be responsive to screen size, so that it looks good with every screen size. This is accomplished with PSEUDO-CLASSES. please refer to the beginning of class */
-
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
-
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-    }
-
-    nav {
-        background-color: #444;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-    }
-
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 600px) {
     nav a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px;
-        margin: 0 10px;
+      display: block;
+      margin: 10px 0;
     }
-
-    section {
-        padding: 20px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .product img {
+      display: block;
     }
-
-    img {
-        width: 200px;
-    }
-
+  }
+  
+  @media screen and (max-width: 600px) {
     .product {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin: 10px;
-        text-align: center;
-        background-color: #fff;
-        border-radius: 5px;
-        display: inline-block;
-        width: 200px;
+      margin: 20px 0;
     }
-
-    .product img{
-        max-width: 50%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
-
-    footer {
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-        bottom: 0;
-        width: 100%;
-    }
-
+  }
