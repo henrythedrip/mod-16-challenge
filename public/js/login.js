@@ -13,7 +13,7 @@ const loginFormHandler = async (event) => {
 
     if (email && password) {
       // Send a POST request to the API endpoint
-      const response = await fetch('/login', {
+      const response = await fetch('/api/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -60,18 +60,3 @@ const loginFormHandler = async (event) => {
     .querySelector('.create-account-drip')
     .addEventListener('submit', signupFormHandler);
   
-// DEBUG: add logout button that is NOT conditional
-const debugLogoutHandler = async event => {
-  await fetch('/logout', {
-    method: 'POST'
-  });
-  if (response.ok) {
-    document.location.replace('/login')
-  } else {
-    alert('failed to logout');
-  }
-}
-
-document
-  .querySelector('#debug-logout-button')
-  .addEventListener('click', debugLogoutHandler)
