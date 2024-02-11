@@ -30,8 +30,6 @@ router.post('/', (req, res) => {
 // this should probably be an authenticated route, because people are able to see other users info by typing /user/id
 router.get('/:id', async (req, res) => {
     const userByID = await User.findByPk(req.params.id);
-    // console.log(userByID);
-    // res.render('user', { users })
     res.json(userByID);
 });
 
