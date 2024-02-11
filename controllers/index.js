@@ -3,10 +3,10 @@ const homeRoutes = require('./homeRoutes');
 const apiRoutes = require('./api');
 const usersRoutes = require('./usersRoutes');
 const profileRoutes = require('./profileRoutes');
-const Products = require('../models/Products');
 const productsRoutes = require ('./productsRoutes');
 const contactRoutes = require('./contactRoutes');
 const musicVideosRoutes = require('./musicVideosRoutes');
+// const withAuth = require('../utils/auth');
 
 //https://localhost:3001/
 router.use('/', homeRoutes);

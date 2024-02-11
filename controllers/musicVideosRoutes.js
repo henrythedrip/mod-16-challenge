@@ -1,5 +1,6 @@
 const router = require('express').Router();
 
+// TODO: ideally we wouldn't hardcode our stuff here like this, but we would include it in the database.
 router.get('/', (req, res) => {
     const videos = [
       {
@@ -25,7 +26,7 @@ router.get('/', (req, res) => {
     ];
   
     // Render the music-videos.handlebars template with the videos data
-    res.render('music-videos', { videos });
+    res.render('music-videos', { videos, logged_in: req.session.logged_in }, );
   });
 
 module.exports = router;

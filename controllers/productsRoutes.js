@@ -8,7 +8,7 @@ router.get("/", async (req, res)=>{
       // console.log("This is all the products", getProducts);
       let products = getProducts.map((product)=>product.get({plain: true}))
       // console.log("This is all the products", products);
-      res.render('products',{ products})
+      res.render('products',{ products, logged_in: req.session.logged_in })
     }catch (err){
       console.log(err);
       res.status(500).json(err)
