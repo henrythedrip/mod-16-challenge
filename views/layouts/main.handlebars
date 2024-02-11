@@ -20,9 +20,8 @@
         <a href="/">Home 🏠</a>
         <a href="/products">Products 👕</a>
         <a href="/contact">Contact 📞</a>
-        <a href="/music-videos">Music Videos 🎥</a>
+        <a href="/musicvideos">Music Videos 🎥</a>
         <a href="/profile">Profile 💼</a>
-        <button id="debug-logout-button">DEBUG LOGOUT</button>
         {{#if logged_in}}
         <button id="logout">Logout ❌</button>
         {{else}}
@@ -41,9 +40,10 @@
 
     <!-- Handlebars library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script src="/js/login.js"></script>
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+    <script src="/js/logout.js"></script>   
+    {{else}} 
+    <script src="/js/login.js"></script>
     {{/if}}
 </body>
 </html>
