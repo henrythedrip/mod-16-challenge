@@ -2,9 +2,12 @@ const router = require('express').Router();
 const Products = require('../../models/Products');
 const logoutRoutes = require('./logoutRoutes');
 const loginRoutes = require('./loginRoutes');
+const buyProductsRoutes = require('./buyProductsRoutes');
 
 router.use('/login', loginRoutes);
 router.use('/logout', logoutRoutes);
+
+router.use('/buyproduct', buyProductsRoutes);
 
 // product routes
 // .get /api/products -> res.render('product', {productData})

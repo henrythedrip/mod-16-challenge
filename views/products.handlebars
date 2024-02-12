@@ -1,12 +1,29 @@
  <section>
     {{#each products}}
-      <div class="product">
+      <div class="product" data-productID="{{productID}}">
             <img src={{img}} alt="{{altText}}">
             <h3>{{productName}}</h3>
             <p>{{productDescription}}</p>
             <p>${{price}}</p>
-            <button>Buy Now</button>
+            <button class="buy-now-button">Buy Now</button>
         </div>
 
     {{/each}}
  </section>
+ <script src="/js/products.js"></script>
+
+
+{{!-- TODO: we should probably make this using joined tables instead of routes like this to avoid buying nonexistant products or sold out ones, but we dont want to learn mysql --}}
+{{!-- 
+
+first we create an attribute with the product id for each product container
+
+then we add an event listener to each buy now button that makes a request to /api/buyproduct/<productID>
+
+then on the backend, we use the req.session object to find the user who made the request
+
+then we find the product that matches the productID
+
+then we add that product to the users model in the database
+
+  --}}

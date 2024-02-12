@@ -5,10 +5,16 @@
     <h2>name: {{name}}</h2>
     <h3>Thank You, {{name}} for supporting henrythedrip</h3>
     {{!-- TODO: delete is not neccessary for the full points, but we might consider doing it so that we have more than the bare minimum --}}
-    <button id="delete-account">Delete Account</button>
+    {{!-- <button id="delete-account">Delete Account</button> --}}
 </div>
 <div class="previous-orders">
-<h3>Previous Orders</h3>
+<h3>Previous Orders:</h3>
+<ul>    
+{{#each purchasedProducts}}
+    <li>{{productName}}: ${{price}}</li>
+{{/each}}
+</ul>
+
 {{!-- TODO: we need to add previous orders, this includes adding checkout functionality to every item --}}
 <h3></h3>
 </div>

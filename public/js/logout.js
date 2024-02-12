@@ -14,7 +14,7 @@
 //   document.querySelector('#logout').addEventListener('click', logout);
   
 
-  console.log('smoke test from debug.js');
+  // console.log('smoke test from debug.js');
 
 // DEBUG: add logout button that is NOT conditional
 const LogoutHandler = async event => {
