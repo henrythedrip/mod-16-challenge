@@ -43,7 +43,7 @@ body {
     background-color: #fff;
     border-radius: 5px;
     display: inline-block;
-    width: 100%;
+    width: 22%;
     box-sizing: border-box;
   }
   
@@ -79,5 +79,6 @@ body {
   @media screen and (max-width: 600px) {
     .product {
       margin: 20px 0;
+      width: 100%;
     }
   }

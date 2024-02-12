@@ -6,7 +6,23 @@ class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
+
+  // readOrders() {
+  //   console.log(this.orders, typeof this.orders);
+  //   const jdata = JSON.parse(this.orders);
+  //   console.log(jdata, typeof jdata);
+  //   return JSON.parse(String(this.orders)).orders;
+  // }
+
+  // writeOrder(productID) {
+  //   let currentOrders = this.readOrders();
+  //   currentOrders.push(String(productID));
+  //   // no clue if this works
+  //   this.orders = JSON.stringify(currentOrders);
+  // }
 }
+
+// User.
 
 User.init(
   {
@@ -16,6 +32,14 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
+    // we are using the mysql JSON datatype here because we dont want to figure out how to join tables to handle orders for accounts lmao
+    orders: {
+      // we are using a string because we dont want to learn how to use the JSON datatype, but we will just JSON.straingify and JSON.parse it in our code before working with it :^)
+      type: DataTypes.STRING,
+      defaultValue: JSON.stringify([])
+    },
+
     name: {
       type: DataTypes.STRING,
     },
