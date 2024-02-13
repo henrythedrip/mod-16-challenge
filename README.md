@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Merch, Media & Community of henrythedrip
+# Merch, Media & Drip Mob of henrythedrip
 
 ## [Table of Contents](#table-of-contents)
   - [Description](#description)
