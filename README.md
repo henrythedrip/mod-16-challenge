@@ -66,7 +66,8 @@ This is a rough list of things that need to be implemented in order for this pro
 ### TODOs
 Things that need to be done with the existing codebase.
 
-- [ ] Expand on the e-commerce aspect of the website. Allow for users to go through the full process of e-commerce, meaning the user can add items to the cart, add payment method and checkout completely.
+- [ ] Expand on the e-commerce aspect of the website. 
+- [ ]Allow for users to go through the full process of e-commerce, meaning the user can add items to the cart, add payment method and checkout completely.
 - [ ] Expand on the product library, adding more merchandise, sizing, color options, etc.
 - [ ] Add another tab that populates concert venues and schedule so users can see when he will be performing in their city
 - [ ] Implement error handling for all routes/endpoints
